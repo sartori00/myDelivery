@@ -1,0 +1,12 @@
+{
+  "name": "myDelivery",
+  "displayName": "myDelivery",
+  "expo": {
+    "name": "myDelivery",
+    "slug": "myDelivery",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
