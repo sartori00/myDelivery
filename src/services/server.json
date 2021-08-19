@@ -1,0 +1,115 @@
+{
+  "empresa_props": {
+    "disponibilidade": 1,
+    "horaDisponibilidade": "22:00h",
+    "nomeEmpresa": "Rock'N Dalle Burger Bar",
+    "tempoEstimadoMin": "45mins",
+    "tempoEstimadoMax": "1:15hrs",
+    "imagemLogo": "https://cdn.neemo.com.br/uploads/settings_webdelivery/logo/2995/logo-rockndalle-square.png",
+    "imagemFundo": "https://media-cdn.tripadvisor.com/media/photo-s/0f/82/09/4b/lanche-pancetta-uma-delicia.jpg"
+  },
+
+  "produtos_destaques": [
+    {
+      "id": "xTudo",
+      "imagem": "https://www.receiteria.com.br/wp-content/uploads/receitas-de-x-tudo.jpg",
+      "titulo": "X-Tudo",
+      "descricao": "Tudo o que você pode imaginar",
+      "precoCheio": "25,90",
+      "precoFinal": "22,90"
+    },
+    {
+      "id": "xBacon",
+      "imagem": "https://comeonburger.com.br/wp-content/uploads/2019/12/xbacon-especial.jpg",
+      "titulo": "X-Bacon",
+      "descricao": "Bacon defumadiin",
+      "precoCheio": "22,90",
+      "precoFinal": "20,00"
+    },
+    {
+      "id": "itubaina2l",
+      "imagem": "https://static.expressodelivery.com.br/imagens/produtos/158996/180/Expresso-Delivery_8edf813db735138e1fc3139fbfe3d7d5.png",
+      "titulo": "Itubaína 2L",
+      "precoFinal": "8,00"
+    },
+    {
+      "id": "fries",
+      "imagem": "http://guerreirolanches.com.br/wp-content/uploads/2017/08/Batata-Frita.jpg",
+      "titulo": "Batatas Fritas",
+      "descricao": "Crocantes e quentinhas",
+      "precoCheio": "25,00",
+      "precoFinal": "20,00"
+    },
+    {
+      "id": "beer",
+      "imagem": "https://a-static.mlcdn.com.br/1500x1500/cerveja-artesanal-times-beer-blond-ale-58/emporioguaraciaba/10996487685/5c113edbfe5cf481a974d459da16c075.jpg",
+      "titulo": "Cerveja Artesanal",
+      "descricao": "Tradição na cidade",
+      "precoCheio": "15,00",
+      "precoFinal": "12,00"
+    }
+  ],
+
+  "categorias_produtos": [
+    { "id": "Burgers", "categoria": "Burgers" },
+    { "id": "Porçoes", "categoria": "Porçoes" },
+    { "id": "Salgados", "categoria": "Salgados" },
+    { "id": "Combos", "categoria": "Combos" },
+    { "id": "Beirutes", "categoria": "Beirutes" },
+    { "id": "Sobremesas", "categoria": "Sobremesas" },
+    { "id": "Bebidas", "categoria": "Bebidas" },
+    { "id": "Cervejas", "categoria": "Cervejas" }
+  ],
+  "produtos": [
+    {
+      "id": "1",
+      "uriImagem": "https://skinaobertioga.webnode.com.br/_files/200000023-dbca4dcc62/X%20SALADA.jpg",
+      "tituloProduto": "X - Salada",
+      "descProduto": "Um delicioso X-Salada",
+      "precoFinal": "19,90",
+      "precoCheio": "25,90",
+      "categoria": "Burgers"
+    },
+    {
+      "id": "2",
+      "uriImagem": "https://embutidosbonatti.ind.br/temp/xxx-57-980x550m0.jpg",
+      "tituloProduto": "X - Bacon",
+      "descProduto": "Um delicioso X-Bacon",
+      "precoFinal": "22,90",
+      "categoria": "Burgers"
+    },
+    {
+      "id": "3",
+      "uriImagem": "https://img77.uenicdn.com/image/upload/v1543484687/service_images/shutterstock_1040760661.jpg",
+      "tituloProduto": "X - Tudo",
+      "descProduto": "Um delicioso X-Tudo",
+      "precoFinal": "27,90",
+      "categoria": "Burgers"
+    },
+    {
+      "id": "4",
+      "uriImagem": "http://guerreirolanches.com.br/wp-content/uploads/2017/08/Batata-Frita.jpg",
+      "tituloProduto": "Porção de Fritas",
+      "descProduto": "Um delicioso X-Salada",
+      "precoFinal": "18,00",
+      "categoria": "Porçoes"
+    },
+    {
+      "id": "5",
+      "uriImagem": "https://images2.cosmopolense.com.br/wp-content/uploads/2019/06/2k9a9057-1559842148.jpg",
+      "tituloProduto": "Porção de Fritas Cheddar e Bacon",
+      "descProduto": "Porção de Fritas Cheddar e Bacon",
+      "precoFinal": "22,50",
+      "precoCheio": "25,90",
+      "categoria": "Porçoes"
+    },
+    {
+      "id": "6",
+      "uriImagem": "https://media-cdn.tripadvisor.com/media/photo-s/18/a0/22/77/porcao-de-calabresa.jpg",
+      "tituloProduto": "Porção de Calabresa",
+      "descProduto": "Um delicioso X-Salada",
+      "precoFinal": "23,00",
+      "categoria": "Porçoes"
+    }
+  ]
+}
