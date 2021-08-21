@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { FlatList, StatusBar, Text } from 'react-native';
+import { FlatList, SectionList, StatusBar, Text } from 'react-native';
 import { CategoryButton } from '../../components/CategoryButton';
 import { Header } from '../../components/Header';
 import { HighlightCard } from '../../components/HighlightCard';
@@ -43,12 +43,12 @@ interface ProductsProps {
 }
 
 interface OrganizedProductsProps {
-  products: ProductsProps[];
+  title: string;
+  data: ProductsProps[];
 }
 
 export function Menu() {
   const [company, setCompany] = useState<CompanyProps>({} as CompanyProps);
-  const [categories, setCategories] = useState<CategoriesProps[]>([]);
   const [highlights, setHighlights] = useState<HighlightProps[]>([]);
   const [productsData, setProductsData] = useState<ProductsProps[]>([]);
   const [organizedProducts, setOrganizedProducts] = useState<OrganizedProductsProps[]>([]);
@@ -65,11 +65,6 @@ export function Menu() {
       setProductsData(data);
     }
 
-    async function fetchCategories() {
-      const { data } = await api.get('categorias_produtos');
-      setCategories(data);
-    }
-
     async function fetchCompanyProps() {
       const { data } = await api.get('empresa_props');
       setCompany(data);
@@ -80,7 +75,6 @@ export function Menu() {
       setHighlights(data);
     }
 
-    fetchCategories();
     fetchCompanyProps();
     fetchHighlightsProps();
     fetchProductsProps();
@@ -121,7 +115,8 @@ export function Menu() {
       });
       if (categoryOrganize.length > 0) {
         organizeProducts.push({
-          products: categoryOrganize,
+          title: category,
+          data: categoryOrganize,
         });
       }
     });
@@ -162,34 +157,31 @@ export function Menu() {
         <FlatList
           showsHorizontalScrollIndicator={false}
           contentContainerStyle={{ paddingBottom: 20 }}
-          keyExtractor={(item) => item.id}
+          keyExtractor={(item) => item.title}
           horizontal
-          data={categories}
+          data={organizedProducts}
           renderItem={({ item }) => (
             <CategoryButton
-              categoria={item.categoria}
-              active={item.id === categorySelected}
-              onPress={() => handleActiveCategory(item.id)}
+              categoria={item.title}
+              active={item.title === categorySelected}
+              onPress={() => handleActiveCategory(item.title)}
             />
           )}
         />
-        {organizedProducts.map(({ products }) => (
-          <FlatList
-            ListHeaderComponent={() => <TitleList title={products[0].categoria} />}
-            showsVerticalScrollIndicator={false}
-            keyExtractor={(item) => item.id}
-            data={products}
-            renderItem={({ item }) => (
-              <ProductCard
-                uriImagem={item.uriImagem}
-                tituloProduto={item.tituloProduto}
-                descProduto={item.descProduto}
-                precoFinal={item.precoFinal}
-                precoCheio={item.precoCheio}
-              />
-            )}
-          />
-        ))}
+        <SectionList
+          sections={organizedProducts}
+          keyExtractor={(item) => item.id}
+          renderSectionHeader={({ section }) => <TitleList title={section.title} />}
+          renderItem={({ item }) => (
+            <ProductCard
+              uriImagem={item.uriImagem}
+              tituloProduto={item.tituloProduto}
+              descProduto={item.descProduto}
+              precoFinal={item.precoFinal}
+              precoCheio={item.precoCheio}
+            />
+          )}
+        />
       </Content>
     </Container>
   );
